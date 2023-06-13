@@ -8,6 +8,7 @@ import Error from "./Error"
 const Formulario = ({setCoins, result}) => {
   
   const monedas = [
+    {id: 'ARS', nombre: 'Peso Argentino'},
     {id: 'USD', nombre: 'Dolar'},
     {id: 'MXN', nombre: 'Peso Mexicano'},
     {id: 'EUR', nombre: 'Euro'},
@@ -65,7 +66,7 @@ const handleSubmit = e => {
       <form
         onSubmit={handleSubmit}
       >
-        <div className="grid grid-cols-2 ">
+        <div className="md:grid grid-cols-2 ">
           <div>
             <SelectMonedas />
           </div>
@@ -73,9 +74,9 @@ const handleSubmit = e => {
             <SelectCryptocurrency />
           </div>
         </div>
-        <div className=" flex justify-center">
+        <div className="flex justify-center">
           <input
-            className="bg-orange-400 w-1/5 text-white p-2 text-3xl shadow rounded-xl"
+            className="mt-14 bg-orange-400 w-1/5 text-white p-2 text-3xl shadow rounded-xl"
             type='submit' value='Quote' />
         </div>
       </form>

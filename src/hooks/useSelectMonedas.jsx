@@ -8,15 +8,15 @@ const useSelectMonedas = (text, opciones) => {
     
   const SelectMonedas = () => (
     <>
-      <div className="mt-6 flex justify-center">
+      <div className="ml-2 mt-6 flex justify-center">
         <div>
           <label
             className="font-mono text-2xl mb-4"
           >{text}
           </label>
-          <div className="flex justify-center ">
+          <div className="grid grid-cols-1 md:flex md:justify-center">
             <select
-              className="text-xl p-3 rounded-3xl  shadow-lg"
+              className="text-xl p-3 rounded-3xl shadow-lg"
               value={state}
               onChange={e => setState( e.target.value)}
             >
