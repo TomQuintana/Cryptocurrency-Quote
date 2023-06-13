@@ -32,7 +32,7 @@ const Result = ({result}) => {
             <div className="text-sm font-mono text-center">
               <h1>High Day</h1>
             </div>
-            <div className='bg-green-400 text-green-100 font-bold md:w-28 text-center mx-auto rounded-md text-xl'>
+            <div className='bg-green-400 text-green-100 font-bold md:w-36 text-center mx-auto rounded-md text-xl'>
               <h1>
                 ${HIGHDAY.toFixed(2)} 
               </h1>
@@ -42,7 +42,7 @@ const Result = ({result}) => {
             <div className="text-sm font-mono text-center">
               <h1>Low Day</h1>
             </div>
-            <div className='bg-red-600 text-red-200 font-bold md:w-28 text-center mx-auto rounded-md text-xl'>
+            <div className='bg-red-600 text-red-200 font-bold md:w-36 text-center mx-auto rounded-md text-xl'>
               <h1>
                 ${LOWDAY.toFixed(2)} 
               </h1>
