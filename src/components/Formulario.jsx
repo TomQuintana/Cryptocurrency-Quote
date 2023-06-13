@@ -3,10 +3,10 @@ import useSelectMonedas from "../hooks/useSelectMonedas"
 import useSelectCryptocurrency from "../hooks/useSelectCryptocurrency"
 import axios from "axios"
 import Result from "./Result"
+import Error from "./Error"
 
 const Formulario = ({setCoins, result}) => {
-  console.log(result)
-
+  
   const monedas = [
     {id: 'USD', nombre: 'Dolar'},
     {id: 'MXN', nombre: 'Peso Mexicano'},
@@ -15,6 +15,7 @@ const Formulario = ({setCoins, result}) => {
   ]
   
   const [cryptos, setCriptos] = useState([])
+  const [error, setError] = useState(false)
 
   const [moneda, SelectMonedas] = useSelectMonedas('Choose your Currency', monedas)
   const [criptocurrency, SelectCryptocurrency] = useSelectCryptocurrency('Choose your Cryptocurrency', cryptos)
@@ -26,7 +27,7 @@ const Formulario = ({setCoins, result}) => {
       const cryptoInfoApi = await axios.get(url)
 
       const cryptoArray = cryptoInfoApi.data.Data.map((crypto) => {
-         const cryptoObj = {
+        const cryptoObj = {
           acronym: crypto.CoinInfo.Name,
           name: crypto.CoinInfo.FullName,
         }
@@ -39,18 +40,28 @@ const Formulario = ({setCoins, result}) => {
 
     cryptoInfo()
   }, [])
-  
+
 const handleSubmit = e => {
     e.preventDefault()
+
+    if ([moneda, criptocurrency].includes('')) {
+      setError(true)
+      return
+    }
 
     setCoins({
       moneda,
       criptocurrency
     })
+
+    setError(false)
   }
 
   return (
     <>
+      {error &&
+        <Error>Todos los campos son obligatorios</Error>
+      }
       <form
         onSubmit={handleSubmit}
       >
