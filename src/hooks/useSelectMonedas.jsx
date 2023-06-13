@@ -8,7 +8,7 @@ const useSelectMonedas = (text, opciones) => {
     
   const SelectMonedas = () => (
     <>
-      <div className="ml-2 mt-6 flex justify-center">
+      <div className="ml-2 mt-10 flex justify-center">
         <div>
           <label
             className="font-mono text-2xl mb-4"
