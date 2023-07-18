@@ -79,7 +79,7 @@ const handleSubmit = e => {
         </div>
         <div className="flex justify-center">
           <input
-            className="mt-14 bg-orange-400 w-1/5 text-white p-2 text-3xl shadow rounded-xl"
+            className="mt-14 bg-orange-400 w-1/5 text-white p-2 text-3xl shadow rounded-xl hover:cursor-pointer"
             type='submit' value='Quote' />
         </div>
       </form>

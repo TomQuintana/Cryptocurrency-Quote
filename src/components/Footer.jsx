@@ -21,7 +21,7 @@ const Footer = () => {
           <div>
             <a 
               className="font-mono"
-              href="https://academy.binance.com/es/articles/what-is-blockchain-and-how-does-it-work">Whats it Blockchain ?</a>
+              href="https://academy.binance.com/es/articles/what-is-blockchain-and-how-does-it-work">Whats is Blockchain ?</a>
           </div>
           <div>
             <a 
