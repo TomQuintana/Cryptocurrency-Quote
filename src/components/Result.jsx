@@ -1,8 +1,6 @@
 const Result = ({result}) => {
 
   const {PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, IMAGEURL, LASTUPDATED,OPENDAY, CHANGEPCTHOUR} = result
-  console.log(PRICE, OPENDAY)
-
 
   return (
     <div className="flex justify-center">

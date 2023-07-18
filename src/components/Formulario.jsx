@@ -16,10 +16,11 @@ const Formulario = ({setCoins, result}) => {
   ]
   
   const [cryptos, setCriptos] = useState([])
-  const [error, setError] = useState(false)
 
   const [moneda, SelectMonedas] = useSelectMonedas('Choose your Currency', monedas)
   const [criptocurrency, SelectCryptocurrency] = useSelectCryptocurrency('Choose your Cryptocurrency', cryptos)
+
+  const [error, setError] = useState(false)
 
   useEffect( () => {
     const cryptoInfo = async () => {
@@ -31,6 +32,8 @@ const Formulario = ({setCoins, result}) => {
         const cryptoObj = {
           acronym: crypto.CoinInfo.Name,
           name: crypto.CoinInfo.FullName,
+          image: crypto.RAW.IMAGEURL,
+          price: crypto.RAW.PRICE
         }
 
         return cryptoObj

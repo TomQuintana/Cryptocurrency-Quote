@@ -1,18 +1,19 @@
-import Formulario from "./Formulario"
+import { Outlet } from 'react-router-dom'
 import Title from "./Title"
+import Nav from './Nav'
+import Footer from './Footer'
 
-export const MainPage = ({setCoins, result}) => {
+export const MainPage = () => {
   return (
-    <div className='h-96'>
+    <>
+        <div>
+          <Title />
+        </div>
       <div>
-        <Title />
+        <Nav />
       </div>
-      <div>
-        <Formulario
-          setCoins={setCoins}
-          result={result}
-        />
-      </div>
-    </div>
+      <Outlet />
+        <Footer />
+    </>
   )
 }

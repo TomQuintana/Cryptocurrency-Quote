@@ -4,7 +4,6 @@ const useSelectCryptocurrency = (text, opciones) => {
 
   const [state, setState] = useState('')
 
-  //TODO: align labels
   const SelectCryptocurrency = () => (
     <>
       <div className="mt-10 flex justify-center">
